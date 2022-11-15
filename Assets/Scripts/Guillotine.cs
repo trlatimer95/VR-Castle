@@ -5,15 +5,36 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Guillotine : XRGrabInteractable
 {
-    // Start is called before the first frame update
+    public GameObject guillotineBlade;
+    public Vector3 startPos;
+    public Vector3 endPos;
+    public float angleToTrigger;
+    public float fallSpeed;
+    public float returnSpeed;
+
+    private bool isFalling = false;
+    private bool isReturning = false;
+    private bool trackHandleRotation = false;
+    
+
     void Start()
+    {
+        startPos = guillotineBlade.transform.position;
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        
+        base.OnSelectEntered(args);
+        trackHandleRotation = true;
+    }
+
+    IEnumerator CheckHandleRotation()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
