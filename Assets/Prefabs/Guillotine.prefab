@@ -29,7 +29,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1004337728472473470}
-  - {fileID: 1004852819087703714}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -178,7 +177,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1008542406539850530}
+    m_TransformParent: {fileID: 1004337728472473470}
     m_Modifications:
     - target: {fileID: 1831363328123912, guid: 6574952d9986e6f4da8f47356f731834, type: 3}
       propertyPath: m_Name
@@ -190,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4217354735900046, guid: 6574952d9986e6f4da8f47356f731834, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18181896
+      value: -0.50644284
       objectReference: {fileID: 0}
     - target: {fileID: 4217354735900046, guid: 6574952d9986e6f4da8f47356f731834, type: 3}
       propertyPath: m_LocalPosition.y
@@ -198,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4217354735900046, guid: 6574952d9986e6f4da8f47356f731834, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7929256
+      value: -1.6215317
       objectReference: {fileID: 0}
     - target: {fileID: 4217354735900046, guid: 6574952d9986e6f4da8f47356f731834, type: 3}
       propertyPath: m_LocalRotation.w
@@ -436,3 +435,8 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  guillotineBlade: {fileID: 0}
+  bladeEndPos: {fileID: 0}
+  angleToTrigger: -60
+  fallSpeed: 0
+  returnSpeed: 0

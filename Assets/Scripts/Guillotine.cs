@@ -39,7 +39,7 @@ public class Guillotine : XRGrabInteractable
         }
         else if (raiseBlade)
         {
-            if (guillotineBlade.transform.position.y < bladeStartPos.y)
+            if (guillotineBlade.transform.position.x < bladeStartPos.x)
             {
                 guillotineBlade.transform.position = Vector3.MoveTowards(guillotineBlade.transform.position, bladeStartPos, returnSpeed * Time.deltaTime);
             }
@@ -72,7 +72,7 @@ public class Guillotine : XRGrabInteractable
     {
         while (trackHandleRotation)
         {
-            if (transform.eulerAngles.y <= angleToTrigger)
+            if (transform.eulerAngles.x <= angleToTrigger)
             {
                 trackHandleRotation = false;
                 dropBlade = true;
