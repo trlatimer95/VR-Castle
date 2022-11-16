@@ -7,8 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Guillotine : XRGrabInteractable
 {
     public GameObject guillotineBlade;
-    public Vector3 bladeStartPos;
-    public Vector3 bladeEndPos;
+    public Transform bladeEndPos;
     public float angleToTrigger = -60.0f;
     public float fallSpeed;
     public float returnSpeed;
@@ -16,6 +15,7 @@ public class Guillotine : XRGrabInteractable
     private bool dropBlade = false;
     private bool raiseBlade = false;
     private bool trackHandleRotation = false;
+    private Vector3 bladeStartPos;
     
 
     void Start()
@@ -27,9 +27,9 @@ public class Guillotine : XRGrabInteractable
     {
         if (dropBlade)
         {
-            if (guillotineBlade.transform.position.y > bladeEndPos.y)
+            if (guillotineBlade.transform.position.y > bladeEndPos.position.y)
             {
-                guillotineBlade.transform.position = Vector3.MoveTowards(guillotineBlade.transform.position, bladeEndPos, fallSpeed * Time.deltaTime);
+                guillotineBlade.transform.position = Vector3.MoveTowards(guillotineBlade.transform.position, bladeEndPos.position, fallSpeed * Time.deltaTime);
             }
             else
             {
