@@ -72,7 +72,7 @@ public class Guillotine : XRGrabInteractable
     {
         while (trackHandleRotation)
         {
-            if (transform.eulerAngles.x <= angleToTrigger)
+            if (transform.eulerAngles.x >= angleToTrigger)
             {
                 trackHandleRotation = false;
                 dropBlade = true;
