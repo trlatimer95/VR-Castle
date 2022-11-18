@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.IO;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -17,13 +17,6 @@ public class MenuManager : MonoBehaviour
     private ActionBasedContinuousMoveProvider continousMoveProvider;
     private TeleportationProvider teleportationProvider;
 
-    private void Awake()
-    {
-        LoadSettings();
-        snapTurnToggle.value = snapTurnProvider.enabled;
-        teleportToggle.value = teleportationProvider.enabled;
-    }
-
     private void Start()
     {
         GameObject playerRig = GameObject.FindGameObjectWithTag("Player");
@@ -31,6 +24,10 @@ public class MenuManager : MonoBehaviour
         continuousTurnProvider = playerRig.GetComponent<ActionBasedContinuousTurnProvider>();
         continousMoveProvider = playerRig.GetComponent<ActionBasedContinuousMoveProvider>();
         teleportationProvider = playerRig.GetComponent<TeleportationProvider>();
+
+        LoadSettings();
+        snapTurnToggle.isOn = snapTurnProvider.enabled;
+        teleportToggle.isOn = teleportationProvider.enabled;
     }
 
     public void ToggleSnapTurn(bool toggleState)
@@ -70,8 +67,8 @@ public class MenuManager : MonoBehaviour
     public void SaveSettings()
     {
         SettingsData settings = new SettingsData();
-        settings.UseSnapTurn = snapTurnToggle.value;
-        settings.UseTeleport = teleportToggle.value;
+        settings.UseSnapTurn = snapTurnToggle.isOn;
+        settings.UseTeleport = teleportToggle.isOn;
 
         string json = JsonUtility.ToJson(settings);
 

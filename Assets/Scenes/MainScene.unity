@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 65853917}
   - component: {fileID: 65853918}
   m_Layer: 0
-  m_Name: Snap Turn Toggle
+  m_Name: Teleport Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4290,7 +4290,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -10616,7 +10616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &984271943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16400,7 +16400,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -17013,6 +17013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsMenu: {fileID: 984271942}
+  snapTurnToggle: {fileID: 113914517}
+  teleportToggle: {fileID: 65853918}
 --- !u!1001 &1644395361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21784,7 +21786,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -23763,6 +23765,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 686178465}
     m_Modifications:
+    - target: {fileID: 2559388604127690679, guid: bd6fb26876a5d5542ac87a50ecd7c75a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5867609102640305262, guid: bd6fb26876a5d5542ac87a50ecd7c75a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
