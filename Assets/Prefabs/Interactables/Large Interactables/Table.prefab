@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939412439852476196}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Table Top Sockets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412440006752765}
   - component: {fileID: 939412440006752764}
-  m_Layer: 7
+  - component: {fileID: 1255622785}
+  m_Layer: 0
   m_Name: Socket (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +124,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &1255622785
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412440006752762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &939412440079615612
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +147,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412440079615615}
   - component: {fileID: 939412440079615614}
-  m_Layer: 7
+  - component: {fileID: 939412441227402302}
+  m_Layer: 0
   m_Name: Socket (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +224,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &939412441227402302
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412440079615612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &939412440911123995
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +247,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412440911123994}
   - component: {fileID: 939412440911123997}
-  m_Layer: 7
+  - component: {fileID: 939412441227402306}
+  m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,6 +324,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &939412441227402306
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412440911123995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &939412440935801129
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +347,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412440935801128}
   - component: {fileID: 939412440935801131}
-  m_Layer: 7
+  - component: {fileID: 939412441227402305}
+  m_Layer: 0
   m_Name: Socket (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +424,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &939412441227402305
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412440935801129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &939412440965064660
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939412440965064663}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Chair Sockets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +484,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412441437751484}
   - component: {fileID: 939412441437751487}
-  m_Layer: 7
+  - component: {fileID: 939412441227402303}
+  m_Layer: 0
   m_Name: Socket (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,6 +561,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &939412441227402303
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412441437751485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &939412441754247041
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939412441754247040}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +619,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939412441828456536}
   - component: {fileID: 939412441828456539}
-  m_Layer: 7
+  - component: {fileID: 939412441227402304}
+  m_Layer: 0
   m_Name: Socket (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,6 +696,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &939412441227402304
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939412441828456537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1036533211948819618
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +719,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1942106407842005986}
   - component: {fileID: 7033924189104833517}
-  m_Layer: 7
+  - component: {fileID: 750099882}
+  m_Layer: 0
   m_Name: Socket (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +759,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -711,6 +796,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &750099882
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036533211948819618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.12, z: -0.12}
 --- !u!1 &2820719860489042204
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +819,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7930916962732600018}
   - component: {fileID: 4345536421982548630}
-  m_Layer: 7
+  - component: {fileID: 1483921254}
+  m_Layer: 0
   m_Name: Socket (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +859,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -797,6 +896,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &1483921254
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820719860489042204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.03, z: -0.16}
 --- !u!1 &4480006676115459450
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +919,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2921017608715396780}
   - component: {fileID: 3000981452753383080}
-  m_Layer: 7
+  - component: {fileID: 24447312}
+  m_Layer: 0
   m_Name: Socket (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +959,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -883,6 +996,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &24447312
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4480006676115459450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.03, z: -0.16}
 --- !u!1 &5368712230218076588
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +1019,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7557862309244156466}
   - component: {fileID: 6554177547232484291}
-  m_Layer: 7
+  - component: {fileID: 325783639}
+  m_Layer: 0
   m_Name: Socket (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +1059,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -969,6 +1096,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &325783639
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368712230218076588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.12, z: -0.12}
 --- !u!1 &6366879308880784990
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +1119,8 @@ GameObject:
   m_Component:
   - component: {fileID: 665238819391474511}
   - component: {fileID: 425763812284902995}
-  m_Layer: 7
+  - component: {fileID: 28150786}
+  m_Layer: 0
   m_Name: Socket (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1159,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1055,6 +1196,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &28150786
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6366879308880784990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.03, z: -0.16}
 --- !u!1 &6561849511573775886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1219,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6618765190508733218}
   - component: {fileID: 2759916259337338726}
-  m_Layer: 7
+  - component: {fileID: 1689761340}
+  m_Layer: 0
   m_Name: Socket (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1104,7 +1259,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 16
+    m_Bits: 32
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1141,6 +1296,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!135 &1689761340
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6561849511573775886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: -0.12, z: -0.12}
 --- !u!1001 &939412440373763688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1154,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1308787399252332, guid: 6cf89ba1ee8469e448785d1f38f741f2, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4471724970022214, guid: 6cf89ba1ee8469e448785d1f38f741f2, type: 3}
       propertyPath: m_RootOrder
@@ -1220,7 +1388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1472692529687606, guid: f15782fd78fa39341a8d22e5ae5191ee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4952441271071262, guid: f15782fd78fa39341a8d22e5ae5191ee, type: 3}
       propertyPath: m_RootOrder
