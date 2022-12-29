@@ -307,7 +307,7 @@ MonoBehaviour:
   fireParticles: {fileID: 3011751605167586534}
   emberParticles: {fileID: 3011300103413482432}
   fireSound: {fileID: 0}
-  fireLight: {fileID: 791320838}
+  logRenderers: []
 --- !u!1 &8577847170292103463
 GameObject:
   m_ObjectHideFlags: 0
