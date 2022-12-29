@@ -30168,9 +30168,9 @@ Transform:
   - {fileID: 969465689}
   - {fileID: 1471616583}
   - {fileID: 751441179}
+  - {fileID: 5092038584408849857}
   - {fileID: 817382157}
   - {fileID: 932588197}
-  - {fileID: 5092038584408849857}
   m_Father: {fileID: 1397272658}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35533,11 +35533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2127578343556181276, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.323
+      value: 0.441
       objectReference: {fileID: 0}
     - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_Type
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_Range
@@ -35557,7 +35557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_Intensity
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_AreaSize.x
@@ -35574,6 +35574,10 @@ PrefabInstance:
     - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657884326712424246, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5264031340553498912, guid: ac6ab647a7ad832479682d81ba92d0c9, type: 3}
       propertyPath: m_RootOrder
