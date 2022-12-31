@@ -44,6 +44,7 @@ public class Fireplace : XRSocketInteractor
         {
             logRenderers[currLogIndex].enabled = true;
             logRenderers[currLogIndex].material = interactableHoverMeshMaterial;
+            Debug.Log("Log entered");
         }
     }
 
@@ -53,6 +54,7 @@ public class Fireplace : XRSocketInteractor
 
         if (currLogIndex >= logRenderers.Length)
             return;
+
 
         if (args.interactorObject.transform.gameObject.CompareTag("Log") && !addedLogs[currLogIndex])
         {
@@ -73,6 +75,12 @@ public class Fireplace : XRSocketInteractor
             logRenderers[currLogIndex].material = logMaterial;
             addedLogs[currLogIndex] = true;
             currLogIndex++;
+            Debug.Log("Log added, new index: " + currLogIndex);
+
+            if (currLogIndex == logRenderers.Length - 1)
+            {
+                StartFire();
+            }
         }
     }
 
