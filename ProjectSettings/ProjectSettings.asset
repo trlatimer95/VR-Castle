@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.2
+  bundleVersion: 0.0.3
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -158,7 +158,7 @@ PlayerSettings:
     Android: com.TGKDevelopment.VRCastle
     Standalone: com.TGKDevelopment.VR-Castle
   buildNumber:
-    Standalone: 0.0.2
+    Standalone: 0.0.3
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -743,8 +743,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -752,7 +752,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: VR Castle
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
