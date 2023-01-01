@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Fireplace : XRSocketInteractor
+public class Fireplace : MonoBehaviour
 {
     [SerializeField]
     private GameObject fireGameObject;
@@ -17,15 +17,16 @@ public class Fireplace : XRSocketInteractor
     private AudioSource fireSound;
     [SerializeField]
     private MeshRenderer[] logRenderers;
+    [SerializeField]
+    private Material canPlaceMaterial;
 
     private int currLogIndex = 0;
     private Material logMaterial;
     private bool[] addedLogs;
+    private bool isLogHovering = false;
 
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
-
         if (fireSound == null)
             gameObject.GetComponentInChildren<AudioSource>();
 
@@ -33,55 +34,47 @@ public class Fireplace : XRSocketInteractor
         addedLogs = new bool[logRenderers.Length];
     }
 
-    protected override void OnHoverEntered(HoverEnterEventArgs args)
+    private void OnTriggerEnter(Collider other)
     {
-        base.OnHoverEntered(args);
+        GameObject obj = other.gameObject;
 
-        if (currLogIndex >= logRenderers.Length)
+        if (currLogIndex >= logRenderers.Length || !obj.CompareTag("Log"))
             return;
 
-        if (args.interactorObject.transform.gameObject.CompareTag("Log") && logRenderers.Any(f => f.enabled == false))
-        {
-            logRenderers[currLogIndex].enabled = true;
-            logRenderers[currLogIndex].material = interactableHoverMeshMaterial;
-            Debug.Log("Log entered");
-        }
+        // display log with green material
+        logRenderers[currLogIndex].enabled = true;
+        logRenderers[currLogIndex].material = canPlaceMaterial;
+        Debug.Log("Log entered");
+
+        isLogHovering = true;
+        StartCoroutine("CheckLogDropped", other.gameObject);
     }
 
-    protected override void OnHoverExited(HoverExitEventArgs args)
+    private void OnTriggerExit(Collider other)
     {
-        base.OnHoverExited(args);
-
-        if (currLogIndex >= logRenderers.Length)
-            return;
-
-
-        if (args.interactorObject.transform.gameObject.CompareTag("Log") && !addedLogs[currLogIndex])
-        {
-            logRenderers[currLogIndex].enabled = false;
-        }
+        isLogHovering = false;
+        logRenderers[currLogIndex].enabled = false;
+        Debug.Log("Log left");
     }
 
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    private IEnumerator CheckLogDropped(GameObject log)
     {
-        base.OnSelectEntered(args);
-
-        if (currLogIndex >= logRenderers.Length)
-            return;
-
-        if (args.interactorObject.transform.gameObject.CompareTag("Log") && !addedLogs[currLogIndex])
+        bool isLogHeld = log.GetComponentInChildren<XRGrabInteractable>().isSelected;
+        if (isLogHovering && isLogHeld)
         {
-            logRenderers[currLogIndex].enabled = true;
+            yield return new WaitForSeconds(0.5f);
+        }
+        else if (isLogHovering && !isLogHeld)
+        {
             logRenderers[currLogIndex].material = logMaterial;
-            addedLogs[currLogIndex] = true;
-            currLogIndex++;
-            Debug.Log("Log added, new index: " + currLogIndex);
+            isLogHovering = false;
+            Debug.Log("Log placed at index: " + currLogIndex);
 
             if (currLogIndex == logRenderers.Length - 1)
-            {
                 StartFire();
-            }
-        }
+
+            currLogIndex++;
+        }      
     }
 
     private void StartFire()
@@ -90,5 +83,6 @@ public class Fireplace : XRSocketInteractor
         fireParticles.Play();
         emberParticles.Play();
         fireSound.Play();
+        Debug.Log("Fire started");
     }
 }

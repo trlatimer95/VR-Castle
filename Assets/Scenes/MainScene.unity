@@ -37980,6 +37980,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 385194725}
     m_Modifications:
+    - target: {fileID: 3065842162720109452, guid: d1be59c46dd082d4ea28b95aa4b94a14, type: 3}
+      propertyPath: canPlaceMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bb10dd6f0d70f942b47c96f074912ea, type: 2}
     - target: {fileID: 3065842162720109455, guid: d1be59c46dd082d4ea28b95aa4b94a14, type: 3}
       propertyPath: m_Center.y
       value: 1.03
