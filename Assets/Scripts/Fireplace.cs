@@ -22,7 +22,6 @@ public class Fireplace : MonoBehaviour
 
     private int currLogIndex = 0;
     private Material logMaterial;
-    private bool[] addedLogs;
     private bool isLogHovering = false;
 
     void Awake()
@@ -44,7 +43,6 @@ public class Fireplace : MonoBehaviour
         // display log with green material
         logRenderers[currLogIndex].enabled = true;
         logRenderers[currLogIndex].material = canPlaceMaterial;
-        Debug.Log("Log entered");
 
         isLogHovering = true;
         StartCoroutine("CheckLogDropped", other.gameObject);
@@ -52,9 +50,11 @@ public class Fireplace : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        isLogHovering = false;
-        logRenderers[currLogIndex].enabled = false;
-        Debug.Log("Log left");
+        if (currLogIndex < logRenderers.Length)
+        {
+            isLogHovering = false;
+            logRenderers[currLogIndex].enabled = false;
+        }    
     }
 
     private IEnumerator CheckLogDropped(GameObject log)
@@ -68,7 +68,7 @@ public class Fireplace : MonoBehaviour
         {
             logRenderers[currLogIndex].material = logMaterial;
             isLogHovering = false;
-            Debug.Log("Log placed at index: " + currLogIndex);
+            Destroy(log);
 
             if (currLogIndex == logRenderers.Length - 1)
                 StartFire();
@@ -83,6 +83,5 @@ public class Fireplace : MonoBehaviour
         fireParticles.Play();
         emberParticles.Play();
         fireSound.Play();
-        Debug.Log("Fire started");
     }
 }
