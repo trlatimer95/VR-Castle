@@ -30,7 +30,6 @@ public class Fireplace : MonoBehaviour
             gameObject.GetComponentInChildren<AudioSource>();
 
         logMaterial = logRenderers[0].material;
-        addedLogs = new bool[logRenderers.Length];
     }
 
     private void OnTriggerEnter(Collider other)
