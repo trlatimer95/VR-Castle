@@ -254,6 +254,10 @@ PrefabInstance:
       value: SM_Item_Hammer_03
       objectReference: {fileID: 0}
     - target: {fileID: 1766374941803816, guid: 3852f14540ef3fa40bb3d77dc5a0f7cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766374941803816, guid: 3852f14540ef3fa40bb3d77dc5a0f7cd, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -320,6 +324,10 @@ PrefabInstance:
       value: SM_Item_Hammer_06
       objectReference: {fileID: 0}
     - target: {fileID: 1009554793031184, guid: 7639a18a841eba845b867076a5ae4d37, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009554793031184, guid: 7639a18a841eba845b867076a5ae4d37, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -384,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 1191186795354600, guid: ace7f770f2ec73d44a51f105d343979d, type: 3}
       propertyPath: m_Name
       value: SM_Item_Hammer_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191186795354600, guid: ace7f770f2ec73d44a51f105d343979d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1191186795354600, guid: ace7f770f2ec73d44a51f105d343979d, type: 3}
       propertyPath: m_IsActive
@@ -514,6 +526,10 @@ PrefabInstance:
       value: SM_Item_Hammer_02
       objectReference: {fileID: 0}
     - target: {fileID: 1335308920097214, guid: 34434a91e1e47d94ba3fbc7f377d80d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335308920097214, guid: 34434a91e1e47d94ba3fbc7f377d80d2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -580,6 +596,10 @@ PrefabInstance:
       value: SM_Item_Hammer_05
       objectReference: {fileID: 0}
     - target: {fileID: 1543450464782570, guid: e59919b2b98587d46b6b2173894187eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543450464782570, guid: e59919b2b98587d46b6b2173894187eb, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -644,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 1461242674856662, guid: 8716d87ba15b1d2428b8b3dfd5a6885d, type: 3}
       propertyPath: m_Name
       value: SM_Item_Hammer_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461242674856662, guid: 8716d87ba15b1d2428b8b3dfd5a6885d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1461242674856662, guid: 8716d87ba15b1d2428b8b3dfd5a6885d, type: 3}
       propertyPath: m_IsActive

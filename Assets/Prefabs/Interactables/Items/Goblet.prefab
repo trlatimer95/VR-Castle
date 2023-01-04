@@ -235,6 +235,10 @@ PrefabInstance:
       value: SM_Item_Goblet_02
       objectReference: {fileID: 0}
     - target: {fileID: 1772588213614434, guid: f4e5b5b31745cd443b10b2ebfcbf2a5f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1772588213614434, guid: f4e5b5b31745cd443b10b2ebfcbf2a5f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -299,6 +303,10 @@ PrefabInstance:
     - target: {fileID: 1162984081943140, guid: 5395abb296986d5488c67caf45e323db, type: 3}
       propertyPath: m_Name
       value: SM_Item_Goblet_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162984081943140, guid: 5395abb296986d5488c67caf45e323db, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1162984081943140, guid: 5395abb296986d5488c67caf45e323db, type: 3}
       propertyPath: m_IsActive
