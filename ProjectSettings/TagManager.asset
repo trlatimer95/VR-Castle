@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fireplace
   - Log
+  - Weapon
   layers:
   - Default
   - TransparentFX

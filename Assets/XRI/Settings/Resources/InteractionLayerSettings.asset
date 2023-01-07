@@ -21,6 +21,8 @@ MonoBehaviour:
   - Chair
   - Firewood
   - Item
+  - Sword
+  - Axe
   - 
   - 
   - 
@@ -43,5 +45,3 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - Teleport
