@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dummy : MonoBehaviour
+public class HitSound : MonoBehaviour
 {
     [SerializeField]
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip hitSound;
+    [SerializeField]
+    private string hitSourceTagName;
 
     private void Awake()
     {
@@ -17,7 +19,7 @@ public class Dummy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag(hitSourceTagName))
         {
             audioSource.PlayOneShot(hitSound);
         }
