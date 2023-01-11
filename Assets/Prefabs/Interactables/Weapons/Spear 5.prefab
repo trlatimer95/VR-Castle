@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1569241091399511039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7475680022015166490}
-  m_Layer: 7
-  m_Name: Second Attach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7475680022015166490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569241091399511039}
-  m_LocalRotation: {x: 0.08023967, y: -0, z: -0, w: 0.9967756}
-  m_LocalPosition: {x: 0, y: -0.082, z: -0.001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3450893003100672524}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 9.205, y: 0, z: 0}
 --- !u!1 &3450893003100672527
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,8 +30,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3450893004646069040}
-  - {fileID: 7475680022015166490}
   - {fileID: 3455431854985467593}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,7 +70,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 1026
   m_DistanceCalculationMode: 1
-  m_SelectMode: 0
+  m_SelectMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
   m_AllowGazeSelect: 0
@@ -172,7 +139,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 3450893004646069040}
+  m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
@@ -186,11 +153,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
+  m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
+  m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -218,37 +185,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!1 &3450893004646069043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3450893004646069040}
-  m_Layer: 7
-  m_Name: Attach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3450893004646069040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3450893004646069043}
-  m_LocalRotation: {x: 0.08023967, y: -0, z: -0, w: 0.9967756}
-  m_LocalPosition: {x: 0, y: 0.088, z: 0.002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3450893003100672524}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9.205, y: 0, z: 0}
 --- !u!1001 &3450893004838128295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,7 +206,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538859609889902, guid: ed3c1bce9753f4b42a88d436306d502a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538859609889902, guid: ed3c1bce9753f4b42a88d436306d502a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538859609889902, guid: ed3c1bce9753f4b42a88d436306d502a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538859609889902, guid: ed3c1bce9753f4b42a88d436306d502a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4538859609889902, guid: ed3c1bce9753f4b42a88d436306d502a, type: 3}
       propertyPath: m_LocalPosition.x

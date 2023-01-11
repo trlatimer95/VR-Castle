@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1510848993422423430}
   - component: {fileID: 1510848993422423424}
   - component: {fileID: 1510848993422423425}
-  - component: {fileID: 4232470546442349851}
   m_Layer: 7
   m_Name: Axe 3
   m_TagString: Weapon
@@ -67,14 +66,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 1510848993579801754}
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 514
   m_DistanceCalculationMode: 1
-  m_SelectMode: 0
+  m_SelectMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
   m_AllowGazeSelect: 0
@@ -157,11 +156,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
+  m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
+  m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -189,27 +188,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &4232470546442349851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510848993422423431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PermittedDisplacementAxes: 7
-  m_ConstrainedAxisDisplacementMode: 1
-  m_TwoHandedRotationMode: 1
-  m_AllowTwoHandedScaling: 0
-  m_ThresholdMoveRatioForScale: 0.1
-  m_ClampScaling: 1
-  m_MinimumScaleRatio: 0.25
-  m_MaximumScaleRatio: 2
-  m_ScaleMultiplier: 0.25
 --- !u!1 &1510848993579801752
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +197,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1510848993579801755}
-  - component: {fileID: 1510848993579801754}
   m_Layer: 7
   m_Name: Attach
   m_TagString: Untagged
@@ -242,19 +219,6 @@ Transform:
   m_Father: {fileID: 1510848993422423430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -5.95, y: 0, z: 0}
---- !u!135 &1510848993579801754
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510848993579801752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2646409094311216344
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +228,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6624591924426797490}
-  - component: {fileID: 6794570220698437832}
   m_Layer: 7
   m_Name: Second Attach
   m_TagString: Untagged
@@ -287,19 +250,6 @@ Transform:
   m_Father: {fileID: 1510848993422423430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -5.95, y: 0, z: 0}
---- !u!135 &6794570220698437832
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2646409094311216344}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1510848993505298835
 PrefabInstance:
   m_ObjectHideFlags: 0

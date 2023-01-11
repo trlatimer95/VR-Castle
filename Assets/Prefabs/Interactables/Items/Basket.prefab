@@ -72,6 +72,13 @@ MonoBehaviour:
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -104,6 +111,7 @@ MonoBehaviour:
       m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -132,10 +140,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -143,11 +153,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
+  m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
+  m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -189,6 +199,18 @@ PrefabInstance:
     - target: {fileID: 4426523443002060, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426523443002060, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426523443002060, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426523443002060, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4426523443002060, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
       propertyPath: m_LocalPosition.x
@@ -243,7 +265,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1448084699619018, guid: 8db1a90d57dda0044a8455a1b7dd5979, type: 3}
   m_PrefabInstance: {fileID: 607611923651331361}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &607611923651331390
+--- !u!65 &607611923651331362
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,21 +276,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7349714, y: 0.038380414, z: 0.45261443}
-  m_Center: {x: -0.01038228, y: 0.019190207, z: 0.00000014901161}
---- !u!65 &607611923651331391
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606735621241150443}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.025992125, y: 0.39117506, z: 0.45261443}
-  m_Center: {x: -0.35075992, y: 0.19558753, z: 0.00000014901161}
+  m_Size: {x: 0.7285776, y: 0.39117506, z: 0.023118913}
+  m_Center: {x: -0.0010242462, y: 0.19558753, z: -0.21474761}
 --- !u!65 &607611923651331388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -295,7 +304,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.72742856, y: 0.39117506, z: 0.023742676}
   m_Center: {x: -0.0024110675, y: 0.19558753, z: 0.21443602}
---- !u!65 &607611923651331362
+--- !u!65 &607611923651331390
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,5 +315,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7285776, y: 0.39117506, z: 0.023118913}
-  m_Center: {x: -0.0010242462, y: 0.19558753, z: -0.21474761}
+  m_Size: {x: 0.7349714, y: 0.038380414, z: 0.45261443}
+  m_Center: {x: -0.01038228, y: 0.019190207, z: 0.00000014901161}
+--- !u!65 &607611923651331391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606735621241150443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025992125, y: 0.39117506, z: 0.45261443}
+  m_Center: {x: -0.35075992, y: 0.19558753, z: 0.00000014901161}
