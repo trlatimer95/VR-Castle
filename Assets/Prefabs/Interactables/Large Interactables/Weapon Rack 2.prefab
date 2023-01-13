@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063965371069971}
   - component: {fileID: 3466063965371069970}
-  - component: {fileID: 9036445539661540560}
+  - component: {fileID: 8416558562605226200}
   m_Layer: 0
   m_Name: Socket (6)
   m_TagString: Untagged
@@ -53,6 +53,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -87,19 +88,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &9036445539661540560
-SphereCollider:
+--- !u!136 &8416558562605226200
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063965371069972}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063965642562736
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063965642562751}
   - component: {fileID: 3466063965642562750}
-  - component: {fileID: 7610369323363260590}
+  - component: {fileID: 2164220903223581305}
   m_Layer: 0
   m_Name: Socket (4)
   m_TagString: Untagged
@@ -153,6 +155,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -187,19 +190,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &7610369323363260590
-SphereCollider:
+--- !u!136 &2164220903223581305
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063965642562736}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063965719163643
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063965719163642}
   - component: {fileID: 3466063965719163641}
-  - component: {fileID: 3193119188549421766}
+  - component: {fileID: 1361940623499786541}
   m_Layer: 0
   m_Name: Socket (5)
   m_TagString: Untagged
@@ -253,6 +257,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -287,19 +292,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &3193119188549421766
-SphereCollider:
+--- !u!136 &1361940623499786541
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063965719163643}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063965845451881
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063965845451880}
   - component: {fileID: 3466063965845451863}
-  - component: {fileID: 5953654402014441266}
+  - component: {fileID: 6760205482745315421}
   m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
@@ -353,6 +359,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -387,19 +394,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &5953654402014441266
-SphereCollider:
+--- !u!136 &6760205482745315421
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063965845451881}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063965987777731
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063965987777730}
   - component: {fileID: 3466063965987777729}
-  - component: {fileID: 5548897021111500742}
+  - component: {fileID: 5325117154610815272}
   m_Layer: 0
   m_Name: Socket (2)
   m_TagString: Untagged
@@ -453,6 +461,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -487,19 +496,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &5548897021111500742
-SphereCollider:
+--- !u!136 &5325117154610815272
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063965987777731}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063966310119387
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966310119386}
   - component: {fileID: 3466063966310119385}
-  - component: {fileID: 423689524778552026}
+  - component: {fileID: 9106745101059193804}
   m_Layer: 0
   m_Name: Socket (6)
   m_TagString: Untagged
@@ -553,6 +563,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -587,19 +598,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &423689524778552026
-SphereCollider:
+--- !u!136 &9106745101059193804
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966310119387}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063966405915436
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966405915435}
   - component: {fileID: 3466063966405915434}
-  - component: {fileID: 6145310746361909451}
+  - component: {fileID: 3029947738325920916}
   m_Layer: 0
   m_Name: Socket (5)
   m_TagString: Untagged
@@ -653,6 +665,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -687,19 +700,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &6145310746361909451
-SphereCollider:
+--- !u!136 &3029947738325920916
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966405915436}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063966521578316
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966521578315}
   - component: {fileID: 3466063966521578314}
-  - component: {fileID: 1122762027806096687}
+  - component: {fileID: 5917432754214858515}
   m_Layer: 0
   m_Name: Socket (1)
   m_TagString: Untagged
@@ -753,6 +767,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -787,19 +802,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &1122762027806096687
-SphereCollider:
+--- !u!136 &5917432754214858515
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966521578316}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063966589916730
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966589916729}
   - component: {fileID: 3466063966589916728}
-  - component: {fileID: 4795157648186913267}
+  - component: {fileID: 2348578359463154843}
   m_Layer: 0
   m_Name: Socket (1)
   m_TagString: Untagged
@@ -853,6 +869,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -887,19 +904,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &4795157648186913267
-SphereCollider:
+--- !u!136 &2348578359463154843
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966589916730}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063966600038888
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966600038871}
   - component: {fileID: 3466063966600038870}
-  - component: {fileID: 7957768674725062994}
+  - component: {fileID: 234587980455383274}
   m_Layer: 0
   m_Name: Socket (4)
   m_TagString: Untagged
@@ -953,6 +971,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -987,19 +1006,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &7957768674725062994
-SphereCollider:
+--- !u!136 &234587980455383274
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966600038888}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063966714684520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966914203035}
   - component: {fileID: 3466063966914203034}
-  - component: {fileID: 618727106656336318}
+  - component: {fileID: 3497945907680839216}
   m_Layer: 0
   m_Name: Socket (3)
   m_TagString: Untagged
@@ -1091,6 +1111,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -1125,19 +1146,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &618727106656336318
-SphereCollider:
+--- !u!136 &3497945907680839216
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966914203036}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &3466063966986637374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063966986637373}
   - component: {fileID: 3466063966986637372}
-  - component: {fileID: 7068085668777256431}
+  - component: {fileID: 4431530548120118005}
   m_Layer: 0
   m_Name: Socket (3)
   m_TagString: Untagged
@@ -1191,6 +1213,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -1225,19 +1248,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &7068085668777256431
-SphereCollider:
+--- !u!136 &4431530548120118005
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063966986637374}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063967098896732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3466063967098896731}
+  - component: {fileID: 3466063965954099719}
   m_Layer: 0
   m_Name: Weapon Rack 2
   m_TagString: Untagged
@@ -1272,6 +1297,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3466063965954099719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466063967098896732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1e137f9a1e339469b2d8c9a08a0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item1Sockets:
+  - {fileID: 3466063967310925266}
+  - {fileID: 3466063966589916728}
+  - {fileID: 3466063965987777729}
+  - {fileID: 3466063966986637372}
+  - {fileID: 3466063965642562750}
+  - {fileID: 3466063966405915434}
+  - {fileID: 3466063966310119385}
+  item2Sockets:
+  - {fileID: 3466063965845451863}
+  - {fileID: 3466063966521578314}
+  - {fileID: 3466063967416900143}
+  - {fileID: 3466063966914203034}
+  - {fileID: 3466063966600038870}
+  - {fileID: 3466063965719163641}
+  - {fileID: 3466063965371069970}
 --- !u!1 &3466063967234253965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063967310925267}
   - component: {fileID: 3466063967310925266}
-  - component: {fileID: 5870237607425164020}
+  - component: {fileID: 5238653755271564161}
   m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
@@ -1363,6 +1416,7 @@ MonoBehaviour:
     m_Bits: 512
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -1397,19 +1451,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &5870237607425164020
-SphereCollider:
+--- !u!136 &5238653755271564161
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063967310925268}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1 &3466063967416900129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,7 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3466063967416900128}
   - component: {fileID: 3466063967416900143}
-  - component: {fileID: 3860932785845521174}
+  - component: {fileID: 2639148683102102367}
   m_Layer: 0
   m_Name: Socket (2)
   m_TagString: Untagged
@@ -1463,6 +1518,7 @@ MonoBehaviour:
     m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -1497,19 +1553,20 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!135 &3860932785845521174
-SphereCollider:
+--- !u!136 &2639148683102102367
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466063967416900129}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1001 &3466063966869123799
 PrefabInstance:
   m_ObjectHideFlags: 0
