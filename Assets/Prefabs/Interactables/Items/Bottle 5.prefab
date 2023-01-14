@@ -192,9 +192,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225560265408800666}
     m_Modifications:
+    - target: {fileID: 1051628997953298, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100557770234736, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1651448017454332, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
       propertyPath: m_Name
       value: SM_Item_Bottle_Clear_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651448017454332, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1651448017454332, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
       propertyPath: m_IsActive
@@ -203,6 +215,18 @@ PrefabInstance:
     - target: {fileID: 4778359077487610, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778359077487610, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778359077487610, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778359077487610, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4778359077487610, guid: 4c3b1efaab39f27448c3644152aa4b57, type: 3}
       propertyPath: m_LocalPosition.x

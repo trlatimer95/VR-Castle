@@ -197,12 +197,28 @@ PrefabInstance:
       value: SM_Item_Bottle_03
       objectReference: {fileID: 0}
     - target: {fileID: 1777117934320152, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777117934320152, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4222292426178362, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222292426178362, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222292426178362, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222292426178362, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4222292426178362, guid: 60ce4300e1864f8429f22cb43afc07c2, type: 3}
       propertyPath: m_LocalPosition.x
