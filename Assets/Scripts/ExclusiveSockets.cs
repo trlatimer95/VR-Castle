@@ -12,19 +12,28 @@ public class ExclusiveSockets : MonoBehaviour
 
     private void Start()
     {
-        foreach (var socket in item1Sockets)
+        // Add event listeners for enabling/disabling respective sockets, check for starting interactable
+        for (int i = 0; i < item1Sockets.Length; i++)
         {
-            socket.selectEntered.AddListener(DisableSocket);
-            socket.selectExited.AddListener(EnableSocket);
+            item1Sockets[i].selectEntered.AddListener(DisableSocket);
+            item1Sockets[i].selectExited.AddListener(EnableSocket);
+            if (item1Sockets[i].startingSelectedInteractable != null)
+                item2Sockets[i].enabled = false;
         }
 
-        foreach (var socket in item2Sockets)
+        for (int i = 0; i < item2Sockets.Length; i++)
         {
-            socket.selectEntered.AddListener(DisableSocket);
-            socket.selectExited.AddListener(EnableSocket);
+            item2Sockets[i].selectEntered.AddListener(DisableSocket);
+            item2Sockets[i].selectExited.AddListener(EnableSocket);
+            if (item2Sockets[i].startingSelectedInteractable != null)
+                item1Sockets[i].enabled = false;
         }
     }
 
+    /// <summary>
+    /// Disable socket sharing location with the socket interacted with. Shared sockets determined by matching array indices.
+    /// </summary>
+    /// <param name="args"></param>
     private void DisableSocket(SelectEnterEventArgs args)
     {
         XRSocketInteractor interactedSocket = (XRSocketInteractor)args.interactorObject;
@@ -46,6 +55,10 @@ public class ExclusiveSockets : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Enable socket sharing location with the socket interacted with. Shared sockets determined by matching array indices.
+    /// </summary>
+    /// <param name="args"></param>
     private void EnableSocket(SelectExitEventArgs args)
     {
         XRSocketInteractor interactedSocket = (XRSocketInteractor)args.interactorObject;
