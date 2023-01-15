@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
     public GameObject settingsMenu;
     public Toggle snapTurnToggle;
     public Toggle teleportToggle;
+    public GameObject rightHandUIRay;
+    public GameObject rightHandTeleportRay;
 
     private ActionBasedSnapTurnProvider snapTurnProvider;
     private ActionBasedContinuousTurnProvider continuousTurnProvider;
@@ -39,7 +41,9 @@ public class MenuManager : MonoBehaviour
     public void ToggleTeleport(bool toggleState)
     {
         teleportationProvider.enabled = toggleState;
+        rightHandTeleportRay.SetActive(toggleState);
         continousMoveProvider.enabled = !toggleState;
+        rightHandUIRay.SetActive(!toggleState);
     }
 
     public void ReloadCurrentScene()

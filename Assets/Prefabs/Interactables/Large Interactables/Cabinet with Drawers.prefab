@@ -1550,7 +1550,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -1732,7 +1732,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -1875,8 +1875,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -92.17883
-    max: 90
+    min: -4.995595
+    max: 121.15551
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -2027,6 +2027,45 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1930699437541594, guid: aa6d9189ba77f9b40a4bc141df64fd27, type: 3}
   m_PrefabInstance: {fileID: 8758957258841594681}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &3129379642664715222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757472460161520611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.016459942, z: 0.41620776}
+  m_Center: {x: -0.0000009536743, y: 0.008229971, z: 0}
+--- !u!65 &3706668363112718551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757472460161520611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.55365324, z: 0.02129203}
+  m_Center: {x: -0.000001018515, y: 0.27682662, z: -0.19745973}
+--- !u!65 &4721131157982832184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757472460161520611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019043475, y: 0.55365324, z: 0.41620776}
+  m_Center: {x: -0.39047825, y: 0.27682662, z: 0.0000019721813}
 --- !u!65 &6313194891032449707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2053,32 +2092,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.79999995, y: 0.015802622, z: 0.41620776}
   m_Center: {x: -0.0000009536743, y: 0.5457519, z: 0}
---- !u!65 &4721131157982832184
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757472460161520611}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019043475, y: 0.55365324, z: 0.41620776}
-  m_Center: {x: -0.39047825, y: 0.27682662, z: 0.0000019721813}
---- !u!65 &3129379642664715222
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757472460161520611}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.79999995, y: 0.016459942, z: 0.41620776}
-  m_Center: {x: -0.0000009536743, y: 0.008229971, z: 0}
 --- !u!1 &8757490990517998501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911570986125468, guid: aa6d9189ba77f9b40a4bc141df64fd27, type: 3}
@@ -2190,7 +2203,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2372,7 +2385,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2554,7 +2567,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2736,7 +2749,7 @@ ConfigurableJoint:
     spring: 2
     damper: 10
   m_LinearLimit:
-    limit: 0.4
+    limit: 0.2
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
