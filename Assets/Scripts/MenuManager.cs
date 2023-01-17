@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.XR.OpenXR.Features;
 
 public class MenuManager : MonoBehaviour
 {
@@ -26,6 +27,18 @@ public class MenuManager : MonoBehaviour
         continuousTurnProvider = playerRig.GetComponent<ActionBasedContinuousTurnProvider>();
         continousMoveProvider = playerRig.GetComponent<ActionBasedContinuousMoveProvider>();
         teleportationProvider = playerRig.GetComponent<TeleportationProvider>();
+
+        if (continuousTurnProvider == null)
+            Debug.Log("No Continuous Turn Provider found");
+
+        if (snapTurnProvider == null)
+            Debug.Log("No snap turn provider found");
+
+        if (continousMoveProvider == null)
+            Debug.Log("No continuous move provider found");
+
+        if (teleportationProvider == null)
+            Debug.Log("No teleportation provider found");
 
         LoadSettings();
         snapTurnToggle.isOn = snapTurnProvider.enabled;
