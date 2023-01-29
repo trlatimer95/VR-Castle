@@ -1578,6 +1578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Weapon_Rack_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1140009013063516, guid: 99f11df84afdff144846054a3ae5309f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4096129573935546, guid: 99f11df84afdff144846054a3ae5309f, type: 3}
       propertyPath: m_RootOrder
       value: 0

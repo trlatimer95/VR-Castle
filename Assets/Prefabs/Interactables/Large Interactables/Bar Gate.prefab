@@ -39,9 +39,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3459676502466339939}
     m_Modifications:
+    - target: {fileID: 1061935599928870, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155641223167836, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242832466068158, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1293693522873120, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bar_Gate_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293693522873120, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314619703147296, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531631947963774, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573778574730834, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586284715560276, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4040980302867840, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_LocalScale.y
@@ -208,6 +240,13 @@ MonoBehaviour:
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -240,6 +279,7 @@ MonoBehaviour:
       m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -268,10 +308,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
   m_VelocityDamping: 1
