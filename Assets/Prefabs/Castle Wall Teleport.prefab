@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788411255940300197, guid: d14c6de48abc41d4b96a5afa13fc8106, type: 3}
       propertyPath: m_Name
-      value: Castle Wall (11)
+      value: Castle Wall Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788411256320708504, guid: d14c6de48abc41d4b96a5afa13fc8106, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14c6de48abc41d4b96a5afa13fc8106, type: 3}
