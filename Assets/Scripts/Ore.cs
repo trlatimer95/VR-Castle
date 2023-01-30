@@ -8,8 +8,18 @@ public class Ore : MonoBehaviour
     private GameObject outputItem;
     [SerializeField]
     private float smeltTime = 5.0f;
+    [SerializeField]
+    private AudioSource smeltAudio;
+    [SerializeField]
+    private AudioClip smeltFinishSound;
 
     private Coroutine currentSmeltTimer;
+
+    private void Start()
+    {
+        if (smeltAudio == null)
+            smeltAudio = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,10 +44,13 @@ public class Ore : MonoBehaviour
 
     private IEnumerator SmeltOre(float smeltTime)
     {
+        smeltAudio.Play();
         yield return new WaitForSeconds(smeltTime);
 
         // Spawn new ingot and destroy ore
         Instantiate(outputItem, transform.position, Quaternion.identity);
+        smeltAudio.Stop();
+        smeltAudio.PlayOneShot(smeltFinishSound);
         Destroy(gameObject);
     }
 }

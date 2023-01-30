@@ -16,6 +16,8 @@ public class Fireplace : MonoBehaviour
     [SerializeField]
     private AudioSource fireSound;
     [SerializeField]
+    private AudioClip logPlacedSound;
+    [SerializeField]
     private MeshRenderer[] logRenderers;
     [SerializeField]
     private Material canPlaceMaterial;
@@ -66,6 +68,7 @@ public class Fireplace : MonoBehaviour
         else if (isLogHovering && !isLogHeld)
         {
             logRenderers[currLogIndex].material = logMaterial;
+            fireSound.PlayOneShot(logPlacedSound);
             isLogHovering = false;
             Destroy(log);
 

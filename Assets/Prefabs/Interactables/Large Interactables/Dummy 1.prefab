@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 17
+  m_StaticEditorFlags: 16
   m_IsActive: 1
 --- !u!4 &373571860874073689
 Transform:
@@ -209,5 +209,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 377742781756549190}
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 55986bb89e9b1c24081317b3271c226d, type: 3}
   hitSourceTagName: Weapon

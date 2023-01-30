@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6713486623872935590}
-  hornSounds: []
+  hornSounds:
+  - {fileID: 8300000, guid: da923713d81385242afb965f913b3cee, type: 3}
 --- !u!54 &6713486623872935584
 Rigidbody:
   m_ObjectHideFlags: 0
