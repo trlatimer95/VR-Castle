@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputItem: {fileID: 5761763985874532401, guid: 1ec84c555fb892b44a58cfeb88b820f6, type: 3}
   smeltTime: 5
-  smeltAudio: {fileID: 0}
+  smeltAudio: {fileID: 388291649865240626}
   smeltFinishSound: {fileID: 8300000, guid: 1d7812b3f4680f94689dbe9a7810762a, type: 3}
 --- !u!82 &388291649865240626
 AudioSource:
@@ -215,7 +215,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 127888787e606474bbb3f7d50c72a45b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

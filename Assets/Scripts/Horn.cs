@@ -22,4 +22,12 @@ public class Horn : MonoBehaviour
             audioSource.PlayOneShot(hornSounds[Random.Range(0, hornSounds.Length - 1)]);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MainCamera"))
+        {
+            audioSource.Stop();
+        }
+    }
 }
