@@ -45,6 +45,25 @@ Users have a couple options for playing this game. The game is published on Itch
 * Load the .apk file into a system that will host the game for your quest (Such as SideQuest)
 
 ## Version History
+### Version 0.2 - 1/31/2023
+* Redesigned village/courtyard with proper scale assets
+* Added forge interactions, players can now smelt gold and iron ore into ingots
+* Added weapons and weapon racks around map that player can interact with
+* Added footsteps and environment sounds
+* Reworked shadows and lighting
+* Performed various optimizations
+* Made teleport ray only show when teleportation enabled, ray is now a UI ray when teleportation is not enabled
+* Fixed table top sockets being too high
+* Fixed scale of various objects
+* Fixed teleportation not re-enabling after being disabled in settings
+* Made weapon racks only accept one weapon per sockets
+* Fixed fireplace in keep not working
+* Modified attach points for various objects
+* Fixed bar doors not opening enough to pass through and opening in opposite direction of hand movement
+* Fixed chairs not clicking into sockets at tables
+* Fixed certain cabinet doors and drawers not working
+* Finished building keep and village
+
 ### Version 0.1 - 1/9/2023
 * Initial prototype build for public use
 * Generated initial builds for Oculus Rift, Quest, and OpenXR
