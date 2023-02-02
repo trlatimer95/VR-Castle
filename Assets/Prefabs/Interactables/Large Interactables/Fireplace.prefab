@@ -266,6 +266,7 @@ MonoBehaviour:
   fireParticles: {fileID: 3011751605167586534}
   emberParticles: {fileID: 3011300103413482432}
   fireSound: {fileID: 912655404116838053}
+  logPlacedSound: {fileID: 8300000, guid: cfd3bc6a64152d24fa0f591e65e871b9, type: 3}
   logRenderers:
   - {fileID: 190646643746040982}
   - {fileID: 1914460626371612157}
