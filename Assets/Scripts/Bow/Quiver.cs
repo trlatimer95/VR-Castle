@@ -4,46 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Quiver : XRSocketInteractor
+public class Quiver : XRBaseInteractor
 {
-    public GameObject arrowPrefab;
-    
-    private Vector3 attachOffset = Vector3.zero;
+    [SerializeField] private GameObject arrowPrefab;
 
-    protected override void Awake()
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        base.Awake();
-        CreateAndSelectArrow();
-        SetAttachOffset();
+        base.OnSelectEntered(args);
+        CreateAndSelectArrow(args);
     }
 
-    protected override void OnSelectExited(SelectExitEventArgs args)
+    private void CreateAndSelectArrow(SelectEnterEventArgs args)
     {
-        base.OnSelectExited(args);
-        CreateAndSelectArrow();
-    }
-  
-    private void CreateAndSelectArrow()
-    {
-        Arrow arrow = CreateArrow();
-        SelectArrow(arrow);
+        // Create arrow, force into interacting hand
+        Arrow arrow = CreateArrow(args.interactorObject.transform);
+        interactionManager.SelectEnter(args.interactorObject, arrow);
     }
 
-    private Arrow CreateArrow()
+    private Arrow CreateArrow(Transform orientation)
     {
-        GameObject arrowObject = Instantiate(arrowPrefab, transform.position - attachOffset, transform.rotation);
+        GameObject arrowObject = Instantiate(arrowPrefab, orientation.position, orientation.rotation);
         return arrowObject.GetComponent<Arrow>();
-    }
-
-    private void SelectArrow(Arrow arrow)
-    {
-        //OnSelectEntered(arrow);
-        //arrow.OnSelectEnter(this);
-    }
-
-    private void SetAttachOffset()
-    {
-        if (selectTarget is XRGrabInteractable interactable)
-            attachOffset = interactable.attachTransform.localPosition;
     }
 }
