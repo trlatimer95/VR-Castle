@@ -52,8 +52,6 @@ public class Arrow : XRGrabInteractable
             yield return null;
         }
 
-        Debug.Log(hit.transform.name);
-
         // Once the arrow has stopped flying
         DisablePhysics();
         ChildArrow(hit);
