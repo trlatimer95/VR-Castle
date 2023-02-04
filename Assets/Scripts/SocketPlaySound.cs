@@ -5,10 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketPlaySound : MonoBehaviour
 {
-    [SerializeField]
-    private XRSocketInteractor socket;
-    [SerializeField]
-    private AudioSource soundSource;
+    [SerializeField] private XRSocketInteractor socket;
+    [SerializeField] private AudioSource soundSource;
 
     void Start()
     {

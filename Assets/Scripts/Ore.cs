@@ -1,19 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ore : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject outputItem;
-    [SerializeField]
-    private float smeltTime = 5.0f;
-    [SerializeField]
-    private AudioSource smeltAudio;
-    [SerializeField]
-    private AudioClip smeltFinishSound;
+    [SerializeField] private GameObject outputItem;
+    [SerializeField] private float smeltTime = 5.0f;
+    [SerializeField] private AudioSource smeltAudio;
+    [SerializeField] private AudioClip smeltFinishSound;
 
-    private Coroutine currentSmeltTimer;
+    private bool isSmelting = false;
+    private DateTime completeTime;
 
     private void Start()
     {
@@ -23,34 +21,42 @@ public class Ore : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger occurred");
         if (other.gameObject.CompareTag("Forge"))
         {
-            Debug.Log("Entered forge");
-            currentSmeltTimer = StartCoroutine("SmeltOre", smeltTime);
-        }
+            isSmelting = true;
+            StartCoroutine("SmeltOre", smeltTime);
+        }        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger finished");
         if (other.gameObject.CompareTag("Forge"))
-        {
-            Debug.Log("Exited forge");
-            if (currentSmeltTimer != null)
-                StopCoroutine(currentSmeltTimer);
-        }
+            isSmelting = false;
     }
 
     private IEnumerator SmeltOre(float smeltTime)
     {
         smeltAudio.Play();
-        yield return new WaitForSeconds(smeltTime);
+        isSmelting = true;
+        completeTime = DateTime.Now.AddSeconds(smeltTime);
 
-        // Spawn new ingot and destroy ore
-        Instantiate(outputItem, transform.position, Quaternion.identity);
-        smeltAudio.Stop();
-        smeltAudio.PlayOneShot(smeltFinishSound);
-        Destroy(gameObject);
+        while (isSmelting && DateTime.Compare(DateTime.Now, completeTime) < 0)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
+        if (!isSmelting) // Player removed ore before smelted
+        {
+            smeltAudio.Stop();
+            yield return null;
+        }
+        else
+        {
+            // Spawn new ingot and destroy ore
+            Instantiate(outputItem, transform.position, Quaternion.identity);
+            smeltAudio.Stop();
+            smeltAudio.PlayOneShot(smeltFinishSound);
+            Destroy(gameObject);
+        }      
     }
 }

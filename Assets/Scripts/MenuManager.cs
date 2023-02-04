@@ -9,11 +9,18 @@ using UnityEngine.XR.OpenXR.Features;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject settingsMenu;
-    public Toggle snapTurnToggle;
-    public Toggle teleportToggle;
-    public GameObject rightHandUIRay;
-    public GameObject rightHandTeleportRay;
+    [Header("UI Components")]
+    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private Toggle snapTurnToggle;
+    [SerializeField] private Toggle teleportToggle;
+    [SerializeField] private Toggle vignetteToggle;
+
+    [Header("Controllers")]
+    [SerializeField] private GameObject rightHandUIRay;
+    [SerializeField] private GameObject rightHandTeleportRay;
+
+    [Header("Vignette Object")]
+    [SerializeField] private GameObject vignette;
 
     private ActionBasedSnapTurnProvider snapTurnProvider;
     private ActionBasedContinuousTurnProvider continuousTurnProvider;
@@ -40,9 +47,11 @@ public class MenuManager : MonoBehaviour
         if (teleportationProvider == null)
             Debug.Log("No teleportation provider found");
 
+
         LoadSettings();
         snapTurnToggle.isOn = snapTurnProvider.enabled;
         teleportToggle.isOn = teleportationProvider.enabled;
+        vignetteToggle.isOn = vignette.activeInHierarchy;
     }
 
     public void ToggleSnapTurn(bool toggleState)
@@ -57,6 +66,11 @@ public class MenuManager : MonoBehaviour
         rightHandTeleportRay.SetActive(toggleState);
         continousMoveProvider.enabled = !toggleState;
         rightHandUIRay.SetActive(!toggleState);
+    }
+
+    public void ToggleVignette(bool toggleState)
+    {
+        vignette.SetActive(toggleState);
     }
 
     public void ReloadCurrentScene()
@@ -79,6 +93,7 @@ public class MenuManager : MonoBehaviour
     {
         public bool UseSnapTurn;
         public bool UseTeleport;
+        public bool UseVignette;
     }
 
     public void SaveSettings()
@@ -86,6 +101,7 @@ public class MenuManager : MonoBehaviour
         SettingsData settings = new SettingsData();
         settings.UseSnapTurn = snapTurnToggle.isOn;
         settings.UseTeleport = teleportToggle.isOn;
+        settings.UseVignette = vignetteToggle.isOn;
 
         string json = JsonUtility.ToJson(settings);
 
@@ -102,6 +118,7 @@ public class MenuManager : MonoBehaviour
 
             ToggleSnapTurn(settings.UseSnapTurn);
             ToggleTeleport(settings.UseTeleport);
+            ToggleVignette(settings.UseVignette);
         }
     }
 }

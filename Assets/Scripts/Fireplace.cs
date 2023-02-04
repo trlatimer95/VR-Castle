@@ -7,20 +7,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Fireplace : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject fireGameObject;
-    [SerializeField]
-    private ParticleSystem fireParticles;
-    [SerializeField]
-    private ParticleSystem emberParticles;
-    [SerializeField]
-    private AudioSource fireSound;
-    [SerializeField]
-    private AudioClip logPlacedSound;
-    [SerializeField]
-    private MeshRenderer[] logRenderers;
-    [SerializeField]
-    private Material canPlaceMaterial;
+    [Header("Fire Components")]
+    [SerializeField] private GameObject fireGameObject;
+    [SerializeField] private ParticleSystem fireParticles;
+    [SerializeField] private ParticleSystem emberParticles;
+    [SerializeField] private AudioSource fireSound;
+
+    [Header("Log Placement")]
+    [SerializeField] private AudioClip logPlacedSound;
+    [SerializeField] private MeshRenderer[] logRenderers;
+    [SerializeField] private Material canPlaceMaterial;
 
     private int currLogIndex = 0;
     private Material logMaterial;
@@ -65,13 +61,14 @@ public class Fireplace : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
         }
-        else if (isLogHovering && !isLogHeld)
+        else if (isLogHovering && !isLogHeld) // If log is still in collider but no longer held by hand
         {
             logRenderers[currLogIndex].material = logMaterial;
             fireSound.PlayOneShot(logPlacedSound);
             isLogHovering = false;
             Destroy(log);
 
+            // If we have added the needed logs, start the fire
             if (currLogIndex == logRenderers.Length - 1)
                 StartFire();
 
