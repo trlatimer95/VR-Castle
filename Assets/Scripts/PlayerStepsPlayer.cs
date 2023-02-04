@@ -24,14 +24,14 @@ public class PlayerStepsPlayer : MonoBehaviour
     {
         if (moveProvider.enabled)
         {
-            if (moveProvider.locomotionPhase == LocomotionPhase.Moving && !footstepSoundSource.isPlaying)
-            {
-                footstepSoundSource.Play();
-            }
-            else if ((moveProvider.locomotionPhase == LocomotionPhase.Done || moveProvider.locomotionPhase == LocomotionPhase.Idle) && footstepSoundSource.isPlaying)
-            {
-                footstepSoundSource.Stop();
-            }         
+            //if (moveProvider. moveProvider.locomotionPhase == LocomotionPhase.Moving && !footstepSoundSource.isPlaying)
+            //{
+            //    footstepSoundSource.Play();
+            //}
+            //else if ((moveProvider.locomotionPhase == LocomotionPhase.Done || moveProvider.locomotionPhase == LocomotionPhase.Idle) && footstepSoundSource.isPlaying)
+            //{
+            //    footstepSoundSource.Stop();
+            //}         
         }
     }
 }
