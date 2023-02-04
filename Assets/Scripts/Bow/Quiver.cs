@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Quiver : XRBaseInteractor
+public class Quiver : XRBaseInteractable
 {
     [SerializeField] private GameObject arrowPrefab;
 
@@ -23,6 +20,7 @@ public class Quiver : XRBaseInteractor
 
     private Arrow CreateArrow(Transform orientation)
     {
+        // Create arrow, and get arrow component
         GameObject arrowObject = Instantiate(arrowPrefab, orientation.position, orientation.rotation);
         return arrowObject.GetComponent<Arrow>();
     }

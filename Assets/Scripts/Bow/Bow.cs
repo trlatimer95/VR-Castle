@@ -1,33 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Bow : XRGrabInteractable
 {
-    private Animator animator;
-    private Puller puller;
+    [SerializeField] private Collider mainCollider;
+    private Rigidbody rb;
 
     protected override void Awake()
     {
         base.Awake();
-        animator = GetComponent<Animator>();
-        puller = GetComponentInChildren<Puller>();
+
+        rb = GetComponent<Rigidbody>();
     }
 
-    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        base.ProcessInteractable(updatePhase);
+        base.OnSelectEntered(args);
 
-        if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
-        {
-            if (isSelected)
-                AnimateBow(puller.PullAmount);
-        }
+        mainCollider.enabled = false;
+        rb.isKinematic = true;
+        rb.useGravity = false;
     }
 
-    private void AnimateBow(float value)
+    protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        animator.SetFloat("Blend", value);
+        base.OnSelectExited(args);
+
+        mainCollider.enabled = true;
+        rb.isKinematic = false;
+        rb.useGravity = true;
     }
 }

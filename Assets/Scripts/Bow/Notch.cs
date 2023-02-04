@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Notch : XRSocketInteractor
@@ -8,27 +6,27 @@ public class Notch : XRSocketInteractor
     [SerializeField, Range(0, 1)] private float releaseThreshold = 0.25f;
 
     public Bow Bow { get; private set; }
-    public Puller Puller { get; private set; }
+    public PullMeasurer PullMeasurer { get; private set; }
 
-    public bool CanRelease => Puller.PullAmount > releaseThreshold;
+    public bool CanRelease => PullMeasurer.PullAmount > releaseThreshold;
 
     protected override void Awake()
     {
         base.Awake();
         Bow = GetComponentInParent<Bow>();
-        Puller = GetComponentInChildren<Puller>();
+        PullMeasurer = GetComponentInChildren<PullMeasurer>();
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
-        Puller.selectExited.AddListener(ReleaseArrow);
+        PullMeasurer.selectExited.AddListener(ReleaseArrow);
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
-        Puller.selectExited.RemoveListener(ReleaseArrow);
+        PullMeasurer.selectExited.RemoveListener(ReleaseArrow);
     }
 
     public void ReleaseArrow(SelectExitEventArgs args)
@@ -47,26 +45,26 @@ public class Notch : XRSocketInteractor
 
     public void UpdateAttach()
     {
-        // Move attach when bow is pulled
-        attachTransform.position = Puller.PullPosition;
+        // Move attach when bow is pulled, this updates the renderer as well
+        attachTransform.position = PullMeasurer.PullPosition;
     }
 
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
-        // Check for hover - factors in recycle time of socket
-        // Check notch is ready, set once bow is picked up
+        // We check for the hover here too, since it factors in the recycle time of the socket
+        // We also check that notch is ready, which is set once the bow is picked up
         return QuickSelect(interactable) && CanHover(interactable) && interactable is Arrow && Bow.isSelected;
     }
 
     private bool QuickSelect(IXRSelectInteractable interactable)
     {
-        // Lets Notch automatically grab arrow
+        // This lets the Notch automatically grab the arrow
         return !hasSelection || IsSelecting(interactable);
     }
 
     private bool CanHover(IXRSelectInteractable interactable)
     {
-        if (interactable is IXRSelectInteractable hoverInteractable)
+        if (interactable is IXRHoverInteractable hoverInteractable)
             return CanHover(hoverInteractable);
 
         return false;

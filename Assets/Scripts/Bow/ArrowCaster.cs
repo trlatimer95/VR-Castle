@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowCaster : MonoBehaviour
@@ -11,7 +9,7 @@ public class ArrowCaster : MonoBehaviour
 
     public bool CheckForCollision(out RaycastHit hit)
     {
-        if (lastPosition == Vector3.zero) 
+        if (lastPosition == Vector3.zero)
             lastPosition = tip.position;
 
         bool collided = Physics.Linecast(lastPosition, tip.position, out hit, layerMask);

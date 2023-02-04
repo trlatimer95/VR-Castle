@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,17 +6,17 @@ public class Arrow : XRGrabInteractable
 {
     [SerializeField] private float speed = 2000.0f;
 
-    private Rigidbody rigidBody;
+    private new Rigidbody rigidbody;
     private ArrowCaster caster;
 
     private bool launched = false;
 
     private RaycastHit hit;
-    
+
     protected override void Awake()
     {
         base.Awake();
-        rigidBody= GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
         caster = GetComponent<ArrowCaster>();
     }
 
@@ -35,13 +34,13 @@ public class Arrow : XRGrabInteractable
     private void LaunchArrow(Notch notch)
     {
         launched = true;
-        ApplyForce(notch.Puller);
+        ApplyForce(notch.PullMeasurer);
         StartCoroutine(LaunchRoutine());
     }
 
-    private void ApplyForce(Puller puller)
+    private void ApplyForce(PullMeasurer pullMeasurer)
     {
-        rigidBody.AddForce(transform.forward * (puller.PullAmount * speed));
+        rigidbody.AddForce(transform.forward * (pullMeasurer.PullAmount * speed));
     }
 
     private IEnumerator LaunchRoutine()
@@ -53,7 +52,9 @@ public class Arrow : XRGrabInteractable
             yield return null;
         }
 
-        // Once arrow has stopped
+        Debug.Log(hit.transform.name);
+
+        // Once the arrow has stopped flying
         DisablePhysics();
         ChildArrow(hit);
         CheckForHittable(hit);
@@ -61,14 +62,14 @@ public class Arrow : XRGrabInteractable
 
     private void SetDirection()
     {
-        if (rigidBody.velocity.z > 0.5f)
-            transform.forward = rigidBody.velocity;
+        if (rigidbody.velocity.z > 0.5f)
+            transform.forward = rigidbody.velocity;
     }
 
     private void DisablePhysics()
     {
-        rigidBody.isKinematic = true;
-        rigidBody.useGravity = false;
+        rigidbody.isKinematic = true;
+        rigidbody.useGravity = false;
     }
 
     private void ChildArrow(RaycastHit hit)
