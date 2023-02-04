@@ -5,11 +5,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Arrow : XRGrabInteractable
 {
     [SerializeField] private float speed = 2000.0f;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private float arrowLifeAfterLaunch = 5.0f;
+    [SerializeField] private float forceAmount = 5.0f;
 
     private new Rigidbody rigidbody;
     private ArrowCaster caster;
+    private AudioSource audioSource;
 
     private bool launched = false;
+    private Coroutine currentDestroyRoutine;
 
     private RaycastHit hit;
 
@@ -18,6 +23,15 @@ public class Arrow : XRGrabInteractable
         base.Awake();
         rigidbody = GetComponent<Rigidbody>();
         caster = GetComponent<ArrowCaster>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    {
+        base.OnSelectEntered(args);
+
+        if (currentDestroyRoutine != null)
+            StopCoroutine(currentDestroyRoutine);
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -29,6 +43,8 @@ public class Arrow : XRGrabInteractable
             if (notch.CanRelease)
                 LaunchArrow(notch);
         }
+
+        currentDestroyRoutine = StartCoroutine(DestroyRoutine());
     }
 
     private void LaunchArrow(Notch notch)
@@ -55,7 +71,8 @@ public class Arrow : XRGrabInteractable
         // Once the arrow has stopped flying
         DisablePhysics();
         ChildArrow(hit);
-        CheckForHittable(hit);
+        ApplyForceToHit(hit);
+        PlayHitSound();
     }
 
     private void SetDirection()
@@ -68,6 +85,12 @@ public class Arrow : XRGrabInteractable
     {
         rigidbody.isKinematic = true;
         rigidbody.useGravity = false;
+        launched = false;
+    }
+
+    private void ApplyForceToHit(RaycastHit hit)
+    {
+        hit.rigidbody?.AddForce(transform.forward * forceAmount);
     }
 
     private void ChildArrow(RaycastHit hit)
@@ -75,14 +98,20 @@ public class Arrow : XRGrabInteractable
         transform.SetParent(hit.transform);
     }
 
-    private void CheckForHittable(RaycastHit hit)
+    private void PlayHitSound()
     {
-        if (hit.transform.TryGetComponent(out IArrowHittable hittable))
-            hittable.Hit(this);
+        audioSource.PlayOneShot(hitSound);
     }
 
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
     {
         return base.IsSelectableBy(interactor) && !launched;
+    }
+
+    private IEnumerator DestroyRoutine()
+    {
+        yield return new WaitForSeconds(arrowLifeAfterLaunch);
+
+        Destroy(gameObject);
     }
 }

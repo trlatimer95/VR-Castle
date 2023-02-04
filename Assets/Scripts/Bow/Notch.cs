@@ -4,9 +4,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Notch : XRSocketInteractor
 {
     [SerializeField, Range(0, 1)] private float releaseThreshold = 0.25f;
+    [SerializeField] AudioClip bowReleaseSound;
+    [SerializeField] AudioClip bowDrawSound;
 
     public Bow Bow { get; private set; }
     public PullMeasurer PullMeasurer { get; private set; }
+
+    private AudioSource audioSource;
+    private bool hasPlayedDrawSound = false;
 
     public bool CanRelease => PullMeasurer.PullAmount > releaseThreshold;
 
@@ -15,6 +20,7 @@ public class Notch : XRSocketInteractor
         base.Awake();
         Bow = GetComponentInParent<Bow>();
         PullMeasurer = GetComponentInChildren<PullMeasurer>();
+        audioSource = GetComponentInParent<AudioSource>();
     }
 
     protected override void OnEnable()
@@ -31,6 +37,12 @@ public class Notch : XRSocketInteractor
 
     public void ReleaseArrow(SelectExitEventArgs args)
     {
+        hasPlayedDrawSound = false;
+        if (audioSource.isPlaying)
+            audioSource.Stop();
+    
+        audioSource.PlayOneShot(bowReleaseSound);
+
         if (hasSelection)
             interactionManager.SelectExit(this, firstInteractableSelected);
     }
@@ -45,6 +57,12 @@ public class Notch : XRSocketInteractor
 
     public void UpdateAttach()
     {
+        if (attachTransform.position != PullMeasurer.PullPosition && !hasPlayedDrawSound)
+        {
+            audioSource.PlayOneShot(bowDrawSound);
+            hasPlayedDrawSound = true;
+        }
+
         // Move attach when bow is pulled, this updates the renderer as well
         attachTransform.position = PullMeasurer.PullPosition;
     }
