@@ -88089,10 +88089,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow
       objectReference: {fileID: 0}
-    - target: {fileID: 2370939534166708419, guid: 8c39acd670ed4b146a478a235d9595d9, type: 3}
-      propertyPath: m_Radius
-      value: 0.07
-      objectReference: {fileID: 0}
     - target: {fileID: 9084718714791411700, guid: 8c39acd670ed4b146a478a235d9595d9, type: 3}
       propertyPath: m_RootOrder
       value: 2
