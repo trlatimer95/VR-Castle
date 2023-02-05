@@ -14,7 +14,6 @@ public class Arrow : XRGrabInteractable
     private AudioSource audioSource;
 
     private bool launched = false;
-    private Coroutine currentDestroyRoutine;
 
     private RaycastHit hit;
 
@@ -26,30 +25,19 @@ public class Arrow : XRGrabInteractable
         audioSource = GetComponent<AudioSource>();
     }
 
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
-    {
-        base.OnSelectEntered(args);
-
-        if (currentDestroyRoutine != null)
-            StopCoroutine(currentDestroyRoutine);
-    }
-
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
 
-        if (args.interactorObject is Notch notch)
+        if (args.interactorObject is Notch notch && notch.CanRelease)
         {
-            if (notch.CanRelease)
-                LaunchArrow(notch);
-        }
-
-        currentDestroyRoutine = StartCoroutine(DestroyRoutine());
+            LaunchArrow(notch);
+            Destroy(this, arrowLifeAfterLaunch);             
+        }    
     }
 
     private void LaunchArrow(Notch notch)
     {
-        launched = true;
         ApplyForce(notch.PullMeasurer);
         StartCoroutine(LaunchRoutine());
     }
@@ -106,12 +94,5 @@ public class Arrow : XRGrabInteractable
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
     {
         return base.IsSelectableBy(interactor) && !launched;
-    }
-
-    private IEnumerator DestroyRoutine()
-    {
-        yield return new WaitForSeconds(arrowLifeAfterLaunch);
-
-        Destroy(gameObject);
     }
 }

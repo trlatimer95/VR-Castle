@@ -26,6 +26,7 @@ public class Notch : XRSocketInteractor
     protected override void OnEnable()
     {
         base.OnEnable();
+        PullMeasurer.selectEntered.AddListener(PlayDrawSound);
         PullMeasurer.selectExited.AddListener(ReleaseArrow);
     }
 
@@ -37,14 +38,22 @@ public class Notch : XRSocketInteractor
 
     public void ReleaseArrow(SelectExitEventArgs args)
     {
+        if (hasSelection)
+            interactionManager.SelectExit(this, firstInteractableSelected);
+
         hasPlayedDrawSound = false;
         if (audioSource.isPlaying)
             audioSource.Stop();
-    
         audioSource.PlayOneShot(bowReleaseSound);
+    }
 
-        if (hasSelection)
-            interactionManager.SelectExit(this, firstInteractableSelected);
+    public void PlayDrawSound(SelectEnterEventArgs args)
+    {
+        if (!hasPlayedDrawSound)
+        {
+            audioSource.PlayOneShot(bowDrawSound);
+            hasPlayedDrawSound = true;
+        }
     }
 
     public override void ProcessInteractor(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -57,12 +66,6 @@ public class Notch : XRSocketInteractor
 
     public void UpdateAttach()
     {
-        if (attachTransform.position != PullMeasurer.PullPosition && !hasPlayedDrawSound)
-        {
-            audioSource.PlayOneShot(bowDrawSound);
-            hasPlayedDrawSound = true;
-        }
-
         // Move attach when bow is pulled, this updates the renderer as well
         attachTransform.position = PullMeasurer.PullPosition;
     }
