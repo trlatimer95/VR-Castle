@@ -13,7 +13,7 @@ public class Arrow : XRGrabInteractable
     private ArrowCaster caster;
     private AudioSource audioSource;
 
-    private bool launched = false;
+    public bool launched = false;
 
     private RaycastHit hit;
 
@@ -49,6 +49,8 @@ public class Arrow : XRGrabInteractable
 
     private IEnumerator LaunchRoutine()
     {
+        launched = true;
+
         // Set direction while flying
         while (!caster.CheckForCollision(out hit))
         {
@@ -65,7 +67,7 @@ public class Arrow : XRGrabInteractable
 
     private void SetDirection()
     {
-        if (rigidbody.velocity.z > 0.5f)
+        if (rigidbody.velocity.z < -0.5f)
             transform.forward = rigidbody.velocity;
     }
 
@@ -73,7 +75,6 @@ public class Arrow : XRGrabInteractable
     {
         rigidbody.isKinematic = true;
         rigidbody.useGravity = false;
-        launched = false;
     }
 
     private void ApplyForceToHit(RaycastHit hit)

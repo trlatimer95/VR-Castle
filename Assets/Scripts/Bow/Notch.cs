@@ -74,7 +74,7 @@ public class Notch : XRSocketInteractor
     {
         // We check for the hover here too, since it factors in the recycle time of the socket
         // We also check that notch is ready, which is set once the bow is picked up
-        return QuickSelect(interactable) && CanHover(interactable) && interactable is Arrow && Bow.isSelected;
+        return QuickSelect(interactable) && interactable is Arrow && Bow.isSelected; // && CanHover(interactable)
     }
 
     private bool QuickSelect(IXRSelectInteractable interactable)
@@ -87,7 +87,9 @@ public class Notch : XRSocketInteractor
     {
         if (interactable is IXRHoverInteractable hoverInteractable)
             return CanHover(hoverInteractable);
-
+            
         return false;
     }
+
+    
 }
