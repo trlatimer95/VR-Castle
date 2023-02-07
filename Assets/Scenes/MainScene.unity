@@ -97905,6 +97905,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 306554214}
+    - target: {fileID: 8583818895952759073, guid: 6c7a6718d5c629242a0f5625136534a0, type: 3}
+      propertyPath: m_AnimateModel
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8583818896477630015, guid: 6c7a6718d5c629242a0f5625136534a0, type: 3}
       propertyPath: m_InteractionManager
       value: 
