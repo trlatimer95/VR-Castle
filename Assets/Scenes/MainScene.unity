@@ -94922,17 +94922,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1316728094}
     m_Modifications:
     - target: {fileID: 103449347, guid: 92165cccd2a41a44a881d640449344b1, type: 3}
-      propertyPath: returnSpeed
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 103449347, guid: 92165cccd2a41a44a881d640449344b1, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 306554214}
-    - target: {fileID: 1007467059611967350, guid: 92165cccd2a41a44a881d640449344b1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1008542406539850529, guid: 92165cccd2a41a44a881d640449344b1, type: 3}
       propertyPath: m_Name
       value: Guillotine
