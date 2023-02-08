@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Fireplace : MonoBehaviour
 {
     [Header("Fire Components")]
-    [SerializeField] private GameObject fireGameObject;
+    [SerializeField] private GameObject fireLight;
     [SerializeField] private ParticleSystem fireParticles;
     [SerializeField] private ParticleSystem emberParticles;
     [SerializeField] private AudioSource fireSound;
@@ -78,7 +78,7 @@ public class Fireplace : MonoBehaviour
 
     private void StartFire()
     {
-        fireGameObject.SetActive(true);
+        fireLight.SetActive(true);
         fireParticles.Play();
         emberParticles.Play();
         fireSound.Play();

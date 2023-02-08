@@ -192,7 +192,7 @@ MonoBehaviour:
   bladeEndPos: {fileID: 326621718}
   angleToTrigger: 30
   fallSpeed: 4
-  returnSpeed: 1
+  returnSpeed: 0.75
 --- !u!135 &103449346
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1180919978974022, guid: 9a94463ff51c26a4f83b4252d8dc9ab2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1209038160472064, guid: 9a94463ff51c26a4f83b4252d8dc9ab2, type: 3}
       propertyPath: m_Name

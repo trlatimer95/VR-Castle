@@ -13,7 +13,7 @@ public class Arrow : XRGrabInteractable
     private ArrowCaster caster;
     private AudioSource audioSource;
 
-    public bool launched = false;
+    private bool launched = false;
 
     private RaycastHit hit;
 

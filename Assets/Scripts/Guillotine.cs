@@ -23,7 +23,7 @@ public class Guillotine : XRGrabInteractable
         bladeStartPos = guillotineBlade.transform.position;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         if (dropBlade)
         {
@@ -39,7 +39,7 @@ public class Guillotine : XRGrabInteractable
         }
         else if (raiseBlade)
         {
-            if (guillotineBlade.transform.position.x < bladeStartPos.x)
+            if (guillotineBlade.transform.position.y < bladeStartPos.y)
             {
                 guillotineBlade.transform.position = Vector3.MoveTowards(guillotineBlade.transform.position, bladeStartPos, returnSpeed * Time.deltaTime);
             }

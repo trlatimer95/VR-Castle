@@ -24,6 +24,8 @@ MonoBehaviour:
   - Sword
   - Axe
   - Spear
+  - Ingot
+  - Ore
   - 
   - 
   - 
@@ -42,6 +44,4 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Teleport
