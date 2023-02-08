@@ -45,6 +45,25 @@ Users have a couple options for playing this game. The game is published on Itch
 * Load the .apk file into a system that will host the game for your quest (Such as SideQuest)
 
 ## Version History
+### Version 1.1 - 2/7/2023
+* Added instructional UI throughout map
+* Fixed arrows able to be picked up after fired but not nocked again
+* Fixed bow sounds
+* Fixed arrows not pointing in direction they are falling
+* Fixed fireplace sounds
+* Resized logs to be more realistic
+* Fixed guillotine blade not retracting
+* Added sound to guillotine
+* Added colliders to paths
+* Fixed player start position
+
+### Version 1.0 - 2/4/2023
+* Implemented bow and arrow
+* Made weapons velocity tracking instead of instantaneous (may notice some delay in weapon movement)
+* Added option to toggle vignette in settings
+* Added sounds to more items
+* Fixed ore smelting not working
+
 ### Version 0.2 - 1/31/2023
 * Redesigned village/courtyard with proper scale assets
 * Added forge interactions, players can now smelt gold and iron ore into ingots
