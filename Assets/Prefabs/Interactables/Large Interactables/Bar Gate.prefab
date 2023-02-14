@@ -41,15 +41,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1061935599928870, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1155641223167836, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1242832466068158, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1293693522873120, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_Name
@@ -57,23 +57,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1293693522873120, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1314619703147296, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1531631947963774, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1573778574730834, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1586284715560276, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040980302867840, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_LocalScale.y
@@ -129,6 +129,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4098657983030178, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23076228481641690, guid: bcd0ab20bb668dc498a3e8d2124395dd, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

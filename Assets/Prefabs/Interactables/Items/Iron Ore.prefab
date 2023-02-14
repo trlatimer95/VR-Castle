@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Ore_Iron_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1103806503518586, guid: 3b69a183e4c6c9a4d89cb0e47b491a28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4202186220437166, guid: 3b69a183e4c6c9a4d89cb0e47b491a28, type: 3}
       propertyPath: m_RootOrder
       value: 0

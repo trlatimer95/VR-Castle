@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Item_Bowl_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1521822927379026, guid: 13457bba34e7e0f44b21467400fa6f00, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4154922056732874, guid: 13457bba34e7e0f44b21467400fa6f00, type: 3}
       propertyPath: m_RootOrder
       value: 0

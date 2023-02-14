@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Ore_Gold_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1299982236815214, guid: cbaa1dd953708b947afcaeb2aae7fe67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4519616606809268, guid: cbaa1dd953708b947afcaeb2aae7fe67, type: 3}
       propertyPath: m_RootOrder
       value: 0

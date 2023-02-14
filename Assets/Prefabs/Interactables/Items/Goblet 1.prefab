@@ -242,6 +242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Item_Goblet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1115838888772330, guid: 729256840a973af45bdf43de7f6df69f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4452186653200588, guid: 729256840a973af45bdf43de7f6df69f, type: 3}
       propertyPath: m_RootOrder
       value: 0

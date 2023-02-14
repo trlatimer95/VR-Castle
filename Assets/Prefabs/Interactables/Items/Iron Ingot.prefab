@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Item_Ingot_Iron_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1637956377792124, guid: 24f099b6c66438c4cb87cf585d7a7b53, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4395421736971524, guid: 24f099b6c66438c4cb87cf585d7a7b53, type: 3}
       propertyPath: m_RootOrder
       value: 0

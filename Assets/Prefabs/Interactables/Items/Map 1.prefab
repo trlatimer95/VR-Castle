@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Map_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1325765676362878, guid: 2ccb1cfa9f08ebd478b0fd4e497b48bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4060391645574384, guid: 2ccb1cfa9f08ebd478b0fd4e497b48bf, type: 3}
       propertyPath: m_RootOrder
       value: 0

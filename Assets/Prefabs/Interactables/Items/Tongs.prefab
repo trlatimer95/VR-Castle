@@ -360,9 +360,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1039228665040580, guid: 16af9cd6885bcf545b3bc07b497140b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1349457415796456, guid: 16af9cd6885bcf545b3bc07b497140b0, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349457415796456, guid: 16af9cd6885bcf545b3bc07b497140b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4679036413214864, guid: 16af9cd6885bcf545b3bc07b497140b0, type: 3}
       propertyPath: m_RootOrder

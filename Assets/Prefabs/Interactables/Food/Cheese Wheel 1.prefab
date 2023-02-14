@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Item_Cheese_Wheel_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1777280417300530, guid: 6d40a727378519d439a7d7c48b91211b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4100273398178198, guid: 6d40a727378519d439a7d7c48b91211b, type: 3}
       propertyPath: m_RootOrder
       value: 0
