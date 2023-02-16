@@ -45,6 +45,14 @@ Users have a couple options for playing this game. The game is published on Itch
 * Load the .apk file into a system that will host the game for your quest (Such as SideQuest)
 
 ## Version History
+### Version 1.2 - 2/16/2023
+* Re-optimized occlusion culling
+* Fixed issues with some items being culled unexpectedly
+* Optimized lighting
+* Significant performance improvements
+* Fixed some objects having texture clipping
+* Fixed some objects having weird coloring
+
 ### Version 1.1 - 2/7/2023
 * Added instructional UI throughout map
 * Fixed arrows able to be picked up after fired but not nocked again
